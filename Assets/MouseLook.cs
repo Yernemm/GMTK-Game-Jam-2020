@@ -9,18 +9,20 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
     public Transform cam;
     float xRotation = 0f;
+    private GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+        float mouseX = gm.isInControl ? Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime : 0f;
+        float mouseY = gm.isInControl ? Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime : 0f;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

@@ -23,7 +23,13 @@ public class GameManager : MonoBehaviour
 
     private bool isFaded;
 
+    private float timeUntilNextFade = 10f;
+
+    private float timeFadeCounter = 0f;
+
     private hudManager hudManager;
+
+    public AdversaryAI adversaryAI;
 
     // Start is called before the first frame update
     void Start()
@@ -68,11 +74,19 @@ public class GameManager : MonoBehaviour
             
         } else if(isFaded) {
             Debug.Log("Faded");
+            adversaryAI.getGoinFam();
             fadedTimeCount += Time.deltaTime;
             if(fadedTimeCount >= fadedTime){
+                adversaryAI.shitTheFedsAreHere();
                 isFaded = false;
                 isFadingIn = true;
                 fadedTimeCount = 0f;
+            }
+        } else {
+            timeFadeCounter += Time.deltaTime;
+            if(timeFadeCounter >= timeUntilNextFade){
+                isFadingOut = true;
+                timeFadeCounter = 0;
             }
         }
     }
