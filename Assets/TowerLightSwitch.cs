@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TowerLightSwitch : MonoBehaviour, Iswitchable
+public class TowerLightSwitch : MonoBehaviour, Iswitchable, IObjective
 {
     // Start is called before the first frame update
 
@@ -14,6 +14,10 @@ public class TowerLightSwitch : MonoBehaviour, Iswitchable
     private string[] textVals = {"_", "R", "G", "B"};
 
     public TextMeshPro text;
+
+    public int correctValue;
+
+
 
     void Start()
     {
@@ -31,4 +35,12 @@ public class TowerLightSwitch : MonoBehaviour, Iswitchable
         gameObject.GetComponent<Renderer>().material = colours[val];
         text.text = textVals[val];
     }
+
+    public bool isMet(){
+        return correctValue == value;
+    }
+}
+
+public interface IObjective{
+    bool isMet();
 }

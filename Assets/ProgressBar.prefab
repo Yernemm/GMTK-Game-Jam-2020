@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 8220370901156280692}
   - component: {fileID: 8220370901156280693}
   - component: {fileID: 8220370901156280690}
+  - component: {fileID: 616014280}
   m_Layer: 0
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -201,3 +202,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 8220370900808248195}
+--- !u!114 &616014280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8220370901156280691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4501c731174bb0e479998bf0e4dbc1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progress: {fileID: 8220370901156280690}
+  chargeRate: 10
+  decayRate: 1
+  isCharging: 0

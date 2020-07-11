@@ -31,6 +31,12 @@ public class GameManager : MonoBehaviour
 
     public AdversaryAI adversaryAI;
 
+    public GameObject[] objectives;
+
+    private GameObject exit;
+
+    private bool lastobjmet = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +45,7 @@ public class GameManager : MonoBehaviour
         hudManager = GameObject.Find("MainUI").GetComponent<hudManager>();
         fadedTime = 1.5f;
         fadeinTime = 0.6f;
+        exit = GameObject.Find("Exit");
     }
 
     // Update is called once per frame
@@ -90,6 +97,16 @@ public class GameManager : MonoBehaviour
                 timeFadeCounter = 0;
             }
         }
+
+
+
+       /* if(this.areObjectivesMet() != lastobjmet){
+            Debug.Log("oh snapnuggets");
+            exit.GetComponent<ExitMover>().open(this.areObjectivesMet());
+        }
+
+        lastobjmet = this.areObjectivesMet();
+        */
     }
 
     public void fadeOut(float time){
@@ -99,5 +116,20 @@ public class GameManager : MonoBehaviour
 
     public void randomiseTimeUntilNextFade(){
         timeUntilNextFade = Random.Range(5f, 15f);
+    }
+
+    public bool areObjectivesMet(){
+        bool flag = true;
+            foreach (GameObject go in objectives)
+            {
+                if(!go.GetComponent<IObjective>().isMet()){
+                    flag = false;
+                }
+            }
+        return flag;
+    }
+
+    public void showExit(bool show){
+        exit.GetComponent<ExitMover>().open(show);
     }
 }
