@@ -14,16 +14,27 @@ public class hudManager : MonoBehaviour
 
     public Text controlIllusionText;
 
+    private Timing tm;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        tm = GameObject.Find("GameManager").GetComponent<Timing>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float ctd = tm.getTimeLeft();
+        string seconds = Mathf.Floor( ctd % 60).ToString();
+        if(seconds.Length < 2){
+            seconds = "0" + seconds;
+        }
+        string minutes  = Mathf.Floor(ctd / 60f).ToString();
+        if(minutes.Length < 2){
+            minutes = "0" + minutes;
+        }
+        countDownText.text = minutes + ":" + seconds;
     }
 
     public void canInteract(bool interact){
