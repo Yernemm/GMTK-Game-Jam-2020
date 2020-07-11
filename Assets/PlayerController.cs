@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;
 
     public Transform groundCheck;
-    public float groundDistance = 0.1f;
+    public float groundDistance = 0.5f;
     public LayerMask groundMask;
     public float jumpVelocity = 50f;
 
@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask playerMask;
 
+    private GameManager gm;
+
     
 
     // Start is called before the first frame update
@@ -42,21 +44,12 @@ public class PlayerController : MonoBehaviour
         velocity = new Vector3();
         velocityMult = FIXED_VELOCITY_DAMPEN_MULTIPLIER;
         anim = GetComponent<Animator>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        
-
-        //cc.Move(move * Time.deltaTime);
-
-        
-
-        
-
-        //cc.Move(velocity * Time.deltaTime);
 
         
     }
@@ -74,7 +67,7 @@ public class PlayerController : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
             velocityMult = FIXED_VELOCITY_DAMPEN_MULTIPLIER_AIR;
         }else{
-            if(Input.GetKey("space")){
+            if(Input.GetKey("space") && gm.isInControl){
                 velocity.y = jumpVelocity;
             }
             velocityMult = FIXED_VELOCITY_DAMPEN_MULTIPLIER;
@@ -83,8 +76,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = gm.isInControl ? Input.GetAxis("Horizontal") : 0f;
+        float z = gm.isInControl ? Input.GetAxis("Vertical") : 0f;
 
         Vector3 move = transform.right * x * speed+ transform.forward * z * speed;
 

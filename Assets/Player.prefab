@@ -118,7 +118,7 @@ MonoBehaviour:
   gravity: -90
   velocity: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 5997621929479236788}
-  groundDistance: 0.1
+  groundDistance: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 256
@@ -196,6 +196,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   interactDistance: 4
+  hudManager: {fileID: 0}
 --- !u!1 &5997621928958430414
 GameObject:
   m_ObjectHideFlags: 0
