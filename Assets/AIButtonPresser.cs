@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AITarget : MonoBehaviour
+public class AIButtonPresser : MonoBehaviour
 {
-
     private GameObject gm;
     private AdversaryAI ai;
 
-    public int id;
+    public GameObject[] buttons;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +24,14 @@ public class AITarget : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.name == "Player"){
+        if(other.name == "Player" && ai.isAiActive()){
             
-            ai.enteredTarget(id);
+            pressRandomButton(other.gameObject);
         }
     }
 
-
+    
+    private void pressRandomButton(GameObject player){
+           buttons[Random.Range(0, buttons.Length)].GetComponent<IInteractable>().interact(player);
+    }
 }

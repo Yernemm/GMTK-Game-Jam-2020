@@ -11,11 +11,20 @@ public class AdversaryAI : MonoBehaviour
     private NavMeshAgent agent;
     private CharacterController controller;
 
+    public GameObject[] targets;
+
+    GameObject nextTarget;
+
+    public bool isAiActive(){
+        return agent.enabled;
+    }
+
     void Start()
     {
         player = GameObject.Find("Player");
         agent = player.GetComponent<NavMeshAgent>();
         controller = player.GetComponent<CharacterController>();
+        chooseRandomTarget();
     }
 
     // Update is called once per frame
@@ -27,11 +36,27 @@ public class AdversaryAI : MonoBehaviour
     public void getGoinFam(){
         agent.enabled = true;
         controller.enabled = false;
-        agent.SetDestination(new Vector3(0,0,0));
+        agent.SetDestination(nextTarget.transform.position);
     }
 
     public void shitTheFedsAreHere(){
         agent.enabled = false;
         controller.enabled = true;
+    }
+
+    public void enteredTarget(int id){
+        Debug.Log("owo");
+        chooseRandomTarget();
+        if(agent.enabled){
+             agent.SetDestination(nextTarget.transform.position);
+            Debug.Log("ohohohoho");
+        }
+           
+       
+    }
+
+    
+    private void chooseRandomTarget(){
+           nextTarget = targets[Random.Range(0, targets.Length)];
     }
 }
