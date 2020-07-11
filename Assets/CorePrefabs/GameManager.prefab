@@ -146,6 +146,10 @@ MonoBehaviour:
   isInControl: 0
   switchVolume: {fileID: 1793187505}
   adversaryAI: {fileID: 1894995441}
+  objectives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1894995441
 MonoBehaviour:
   m_ObjectHideFlags: 0

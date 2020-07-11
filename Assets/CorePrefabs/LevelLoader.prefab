@@ -387,4 +387,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 105410413201855205}
-  transitionTime: 1
+  transitionTime: 3
