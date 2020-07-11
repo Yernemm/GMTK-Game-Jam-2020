@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5117373714060834304}
   - component: {fileID: 5117373714060834306}
   - component: {fileID: 5117373714060834305}
+  - component: {fileID: 452563035}
   m_Layer: 8
   m_Name: AI Target
   m_TagString: Untagged
@@ -57,3 +58,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c190ce1f2bd0149b0da6a6ee976a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+--- !u!114 &452563035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117373714060834319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928457fc116f93f4aa9e27de919d873d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

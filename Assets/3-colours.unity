@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: fe9da8e0b2278b043a2e30b800bd900a,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1844,6 +1844,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 399af8fe0a0fab5438374c8448756748, type: 2}
   - {fileID: 2100000, guid: 99a18e14cc41ce84b8d8b4b86cabd889, type: 2}
   - {fileID: 2100000, guid: 10079fee1ff8cd242911ac79a010f2dc, type: 2}
+  sequence: 00000000020000000300000001000000
 --- !u!1 &101249580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6008627088010067058, guid: 6d98f0d15ee4981479592f74204b0be0,
@@ -2123,7 +2124,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh76382
+  m_Name: pb_Mesh84420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2582,22 +2583,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5117373714228176472}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &452563035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452563031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 928457fc116f93f4aa9e27de919d873d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 101249580}
-  - {fileID: 23033250}
-  - {fileID: 1009907442}
 --- !u!1 &553193328
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +6728,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh76356
+  m_Name: pb_Mesh84394
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11897,6 +11882,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1662257378}
     m_Modifications:
+    - target: {fileID: 452563035, guid: 7500c72b9bd0aa9409136d73c1d8079f, type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 101249580}
+    - target: {fileID: 452563035, guid: 7500c72b9bd0aa9409136d73c1d8079f, type: 3}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 23033250}
+    - target: {fileID: 452563035, guid: 7500c72b9bd0aa9409136d73c1d8079f, type: 3}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1009907442}
     - target: {fileID: 5117373714060834304, guid: 7500c72b9bd0aa9409136d73c1d8079f,
         type: 3}
       propertyPath: m_LocalPosition.x

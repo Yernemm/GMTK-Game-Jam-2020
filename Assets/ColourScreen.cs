@@ -11,7 +11,7 @@ public class ColourScreen : MonoBehaviour
     public Material[] colours;
     private string[] colourNames = {" ", "R", "G", "B"};
 
-    private int[] sequence = {0, 2, 3 ,1};
+    public int[] sequence = {0, 2, 3 ,1};
 
     private float showTime = 1f;
 

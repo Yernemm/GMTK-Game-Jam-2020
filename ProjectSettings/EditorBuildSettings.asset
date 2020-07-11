@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/3-colours.unity
     guid: 11eac30caad0e874d8722201b209499c
   - enabled: 1
+    path: Assets/Base Level.unity
+    guid: 7547fe0d788338f42ba540a3c03aa68f
+  - enabled: 1
     path: Assets/Test.unity
     guid: f0ddb34361a94044b96e04508b4cebb9
   m_configObjects: {}
