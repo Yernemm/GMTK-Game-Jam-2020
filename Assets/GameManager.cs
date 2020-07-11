@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
                 isFaded = false;
                 isFadingIn = true;
                 fadedTimeCount = 0f;
+                randomiseTimeUntilNextFade();
             }
         } else {
             timeFadeCounter += Time.deltaTime;
@@ -94,5 +95,9 @@ public class GameManager : MonoBehaviour
     public void fadeOut(float time){
         fadeoutTime = time;
         isFadingOut = true;
+    }
+
+    public void randomiseTimeUntilNextFade(){
+        timeUntilNextFade = Random.Range(5f, 15f);
     }
 }
