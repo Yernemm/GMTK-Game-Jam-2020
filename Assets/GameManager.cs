@@ -37,21 +37,37 @@ public class GameManager : MonoBehaviour
 
     private bool lastobjmet = false;
 
+    public bool isMenuScreen = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        isInControl = true;
+        isInControl = !isMenuScreen;
         fadeOut(6f);
         hudManager = GameObject.Find("MainUI").GetComponent<hudManager>();
         fadedTime = 1.5f;
         fadeinTime = 0.6f;
         exit = GameObject.Find("Exit");
+        StartCoroutine(LateStart());
     }
+
+    
+     IEnumerator LateStart()
+     {
+        yield return new WaitForSeconds(1f);
+         
+        if(isMenuScreen){
+            adversaryAI.getGoinFam();
+        }
+         
+     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isFadingOut){
+        if(!isMenuScreen){
+
+            if(isFadingOut){
             Debug.Log("Fading Out");
             float w = switchVolume.weight;
             w += Time.deltaTime / fadeoutTime;
@@ -97,6 +113,10 @@ public class GameManager : MonoBehaviour
                 timeFadeCounter = 0;
             }
         }
+
+        }
+
+        
 
 
 

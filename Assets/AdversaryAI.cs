@@ -15,6 +15,8 @@ public class AdversaryAI : MonoBehaviour
 
     GameObject nextTarget;
 
+    private int lastTarget = -1;
+
     public bool isAiActive(){
         return agent.enabled;
     }
@@ -25,7 +27,8 @@ public class AdversaryAI : MonoBehaviour
         agent = player.GetComponent<NavMeshAgent>();
         controller = player.GetComponent<CharacterController>();
         chooseRandomTarget();
-    }
+     }
+ 
 
     // Update is called once per frame
     void Update()
@@ -57,6 +60,12 @@ public class AdversaryAI : MonoBehaviour
 
     
     private void chooseRandomTarget(){
-           nextTarget = targets[Random.Range(0, targets.Length)];
+        int nextTargetId = Random.Range(0, targets.Length);
+        if(nextTargetId == lastTarget){
+            nextTargetId = (nextTargetId + 1) % targets.Length;
+        }
+
+        nextTarget = targets[nextTargetId];
+        lastTarget = nextTargetId;
     }
 }
