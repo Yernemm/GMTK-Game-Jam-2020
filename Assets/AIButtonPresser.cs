@@ -24,7 +24,8 @@ public class AIButtonPresser : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.name == "Player" && ai.isAiActive()){
+
+        if(other.name == "Player" && ai.isAiActive() && buttons.Length > 0){
             
             pressRandomButton(other.gameObject);
         }

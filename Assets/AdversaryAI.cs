@@ -25,9 +25,12 @@ public class AdversaryAI : MonoBehaviour
 
     void Start()
     {
+ 
         player = GameObject.Find("Player");
         agent = player.GetComponent<NavMeshAgent>();
         controller = player.GetComponent<CharacterController>();
+        if(!isEnabledThisLevel)
+        return;
         chooseRandomTarget();
      }
  
@@ -54,6 +57,8 @@ public class AdversaryAI : MonoBehaviour
     }
 
     public void enteredTarget(int id){
+        if(!isEnabledThisLevel)
+            return;
         Debug.Log("owo");
         chooseRandomTarget();
         if(agent.enabled){
@@ -66,6 +71,8 @@ public class AdversaryAI : MonoBehaviour
 
     
     private void chooseRandomTarget(){
+                if(!isEnabledThisLevel)
+            return;
         int nextTargetId = Random.Range(0, targets.Length);
         if(nextTargetId == lastTarget){
             nextTargetId = (nextTargetId + 1) % targets.Length;

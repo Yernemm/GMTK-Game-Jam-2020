@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
     public bool isMenuScreen = false;
 
+    public bool isAiEnabled = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour
      {
         yield return new WaitForSeconds(1f);
          
-        if(isMenuScreen){
+        if(isMenuScreen && isAiEnabled){
             adversaryAI.getGoinFam();
         }
          
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isMenuScreen){
+        if(!isMenuScreen && isAiEnabled){
 
             if(isFadingOut){
             Debug.Log("Fading Out");
