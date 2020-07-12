@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Opposite-sides 2.unity
     guid: 1f7644f0594192a4589f3908dc157330
   - enabled: 1
+    path: Assets/Opposite-sides Hexa.unity
+    guid: 4e07f458a0afcf6449588fd5ef744a2f
+  - enabled: 1
     path: Assets/End Scene - opposite.unity
     guid: 6d4b5a3d68b807340b25c6652197d930
   m_configObjects: {}
