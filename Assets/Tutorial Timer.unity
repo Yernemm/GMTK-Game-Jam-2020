@@ -295,7 +295,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-430388
+  m_Name: pb_Mesh-481164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -458,7 +458,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh94688
+  m_Name: pb_Mesh106272
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -967,7 +967,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh94742
+  m_Name: pb_Mesh106328
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3912,8 +3912,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.8584906, g: 0.75229186, b: 0.51428443, a: 1}
-  m_Intensity: 40.8
+  m_Color: {r: 0.9433962, g: 0.21732588, b: 0.15574935, a: 1}
+  m_Intensity: 132.87
   m_Range: 100.16
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3999,7 +3999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1894995442, guid: e196c431548747743bbbed34205632ef, type: 3}
       propertyPath: isCountdownEnabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1530869518359109806, guid: e196c431548747743bbbed34205632ef,
         type: 3}
@@ -4137,11 +4137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Beware:
-
-    Sometimes you lose control
-
-    and something takes over'
+  m_text: Hurry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4152,7 +4148,7 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -4210,12 +4206,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1522702573}
-    characterCount: 59
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 9
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
-    lineCount: 3
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -4417,7 +4413,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh94728
+  m_Name: pb_Mesh106314
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4660,7 +4656,7 @@ PrefabInstance:
     - target: {fileID: 2586407380074636887, guid: ed24b4b3ac901f344be77141dd356756,
         type: 3}
       propertyPath: correctValue
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2586407380801798741, guid: ed24b4b3ac901f344be77141dd356756,
         type: 3}
@@ -4976,7 +4972,7 @@ PrefabInstance:
     - target: {fileID: 2586407380074636887, guid: ed24b4b3ac901f344be77141dd356756,
         type: 3}
       propertyPath: correctValue
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2586407380801798741, guid: ed24b4b3ac901f344be77141dd356756,
         type: 3}
@@ -5289,7 +5285,7 @@ PrefabInstance:
     - target: {fileID: 3623183713802629515, guid: 6de026528957ec544993ddd5744cdc59,
         type: 3}
       propertyPath: sequence.Array.data[1]
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3623183713802629515, guid: 6de026528957ec544993ddd5744cdc59,
         type: 3}
@@ -5299,7 +5295,7 @@ PrefabInstance:
     - target: {fileID: 3623183713802629515, guid: 6de026528957ec544993ddd5744cdc59,
         type: 3}
       propertyPath: sequence.Array.data[2]
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3623183713802629556, guid: 6de026528957ec544993ddd5744cdc59,
         type: 3}

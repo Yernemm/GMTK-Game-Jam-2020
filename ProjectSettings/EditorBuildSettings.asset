@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Tutorial.unity
     guid: 21e7dab04569fdf4ab09aa8b982e080d
   - enabled: 1
+    path: Assets/Tutorial Control.unity
+    guid: 77b0da52b05539149aa12995b09b5d44
+  - enabled: 1
+    path: Assets/Tutorial Timer.unity
+    guid: 257c40f18cbaedf4682dd8ef61595dff
+  - enabled: 1
     path: Assets/3-colours.unity
     guid: 11eac30caad0e874d8722201b209499c
   - enabled: 1
