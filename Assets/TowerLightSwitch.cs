@@ -11,7 +11,7 @@ public class TowerLightSwitch : MonoBehaviour, Iswitchable, IObjective
 
     public Material[] colours;
 
-    private string[] textVals = {"_", "R", "G", "B"};
+    private string[] textVals = {"_", "R", "G", "B", "C", "Y", "M"};
 
     public TextMeshPro text;
 

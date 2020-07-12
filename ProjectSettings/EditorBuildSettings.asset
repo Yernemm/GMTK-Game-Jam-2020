@@ -21,6 +21,15 @@ EditorBuildSettings:
     path: Assets/Opposite-sides 1.unity
     guid: 84236c656e04f5d4badc8e6b71cabe35
   - enabled: 1
+    path: Assets/Tutorial More Buttons.unity
+    guid: f112f1a47c0abf44085592352fc4def1
+  - enabled: 1
+    path: Assets/3-colours 6.unity
+    guid: 1bdc326835b414e4e950f2a0da329171
+  - enabled: 1
+    path: Assets/Opposite-sides 2.unity
+    guid: 1f7644f0594192a4589f3908dc157330
+  - enabled: 1
     path: Assets/End Scene - opposite.unity
     guid: 6d4b5a3d68b807340b25c6652197d930
   m_configObjects: {}

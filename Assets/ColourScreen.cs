@@ -9,7 +9,7 @@ public class ColourScreen : MonoBehaviour
     public TextMeshPro tmp;
 
     public Material[] colours;
-    private string[] colourNames = {" ", "R", "G", "B"};
+    private string[] colourNames = {" ", "R", "G", "B", "C", "Y", "M"};
 
     public int[] sequence = {0, 2, 3 ,1};
 

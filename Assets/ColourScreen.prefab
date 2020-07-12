@@ -535,4 +535,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 399af8fe0a0fab5438374c8448756748, type: 2}
   - {fileID: 2100000, guid: 99a18e14cc41ce84b8d8b4b86cabd889, type: 2}
   - {fileID: 2100000, guid: 10079fee1ff8cd242911ac79a010f2dc, type: 2}
+  - {fileID: 2100000, guid: 055b46b64f6f35345b873800360e008c, type: 2}
+  - {fileID: 2100000, guid: 9876f2afcf386784fb2a506d2433a726, type: 2}
+  - {fileID: 2100000, guid: 77067188ce0afe14da65097097e2494d, type: 2}
   sequence: 00000000020000000300000001000000
