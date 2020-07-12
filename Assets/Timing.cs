@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timing : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Timing : MonoBehaviour
 
     public AdversaryAI ai;
 
+    public bool isCountdownEnabled = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,13 @@ public class Timing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdown -= ai.isAiActive() ? Time.deltaTime * noControlMultiplier : Time.deltaTime;
+        if(isCountdownEnabled){
+                countdown -= ai.isAiActive() ? Time.deltaTime * noControlMultiplier : Time.deltaTime;
+                if(countdown <= -2f){
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                }
+        }
+
 
     }
 

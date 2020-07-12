@@ -12,7 +12,10 @@ public class hudManager : MonoBehaviour
 
     public Image screenBlocker;
 
-    public Text controlIllusionText;
+    public Text controlIllusionText;    
+
+    public Image deadBlocker;
+    public Text deadText;
 
     private Timing tm;
 
@@ -26,15 +29,28 @@ public class hudManager : MonoBehaviour
     void Update()
     {
         float ctd = tm.getTimeLeft();
-        string seconds = Mathf.Floor( ctd % 60).ToString();
-        if(seconds.Length < 2){
-            seconds = "0" + seconds;
+        if(ctd > 0f){
+            if(tm.isCountdownEnabled){
+                string seconds = Mathf.Floor( ctd % 60).ToString();
+                if(seconds.Length < 2){
+                    seconds = "0" + seconds;
+                }
+                string minutes  = Mathf.Floor(ctd / 60f).ToString();
+                if(minutes.Length < 2){
+                    minutes = "0" + minutes;
+                }
+                countDownText.text = minutes + ":" + seconds;
+            }else{
+                countDownText.text = "";
+            }
+            
+        }else{
+            countDownText.enabled = false;
+            objectiveText.enabled = false;
+            deadBlocker.enabled = true;
+            deadText.enabled = true;
         }
-        string minutes  = Mathf.Floor(ctd / 60f).ToString();
-        if(minutes.Length < 2){
-            minutes = "0" + minutes;
-        }
-        countDownText.text = minutes + ":" + seconds;
+
     }
 
     public void canInteract(bool interact){

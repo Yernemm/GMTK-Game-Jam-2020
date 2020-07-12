@@ -744,3 +744,5 @@ MonoBehaviour:
   objectiveText: {fileID: 1406850886010573113}
   screenBlocker: {fileID: 2117321688000758544}
   controlIllusionText: {fileID: 3990677350625679528}
+  deadBlocker: {fileID: 1531330793}
+  deadText: {fileID: 389395578}

@@ -17,6 +17,8 @@ public class AdversaryAI : MonoBehaviour
 
     private int lastTarget = -1;
 
+    public bool isEnabledThisLevel = true;
+
     public bool isAiActive(){
         return agent.enabled;
     }
@@ -37,12 +39,16 @@ public class AdversaryAI : MonoBehaviour
     }
 
     public void getGoinFam(){
+        if(!isEnabledThisLevel)
+            return;
         agent.enabled = true;
         controller.enabled = false;
         agent.SetDestination(nextTarget.transform.position);
     }
 
     public void shitTheFedsAreHere(){
+        if(!isEnabledThisLevel)
+            return;
         agent.enabled = false;
         controller.enabled = true;
     }
